@@ -78,7 +78,7 @@
         flex-direction: column;
         height: auto;
         .homeleft{
-            padding-left: 80px;
+         padding-left: 80px;
           width: 100%;
         }
         .homeright{
@@ -98,11 +98,8 @@
     }
 }
 @media  screen and (max-width: 500px) {
-
         .homecontainer{
-        
-          
-            .homeleft{
+       .homeleft{
                 width: 100%;
                 padding: 50px 10px;
                 h1{

@@ -1,5 +1,9 @@
 import React from "react";
-import AccessibilityIcon from "@mui/icons-material/Accessibility";
+import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
+import PortraitOutlinedIcon from "@mui/icons-material/PortraitOutlined";
+import PersonPinOutlinedIcon from "@mui/icons-material/PersonPinOutlined";
+import ContactMailOutlinedIcon from "@mui/icons-material/ContactMailOutlined";
+import WorkspacesOutlinedIcon from "@mui/icons-material/WorkspacesOutlined";
 import "./Menu.scss";
 const Menu = () => {
   return (
@@ -16,23 +20,23 @@ const Menu = () => {
       <div className="header_menu">
         <ul>
           <li>
-            <AccessibilityIcon />
+            <HomeOutlinedIcon />
             <a href="#home">HOME</a>
           </li>
           <li>
-            <AccessibilityIcon />
+            <PersonPinOutlinedIcon />
             <a href="#aboutme">ABOUT ME</a>
           </li>
           <li>
-            <AccessibilityIcon />
+            <WorkspacesOutlinedIcon />
             <a href="#services">SERVICES</a>
           </li>
           <li>
-            <AccessibilityIcon />
+            <PortraitOutlinedIcon />
             <a href="#portfolio">PORTFOLIO</a>
           </li>
           <li>
-            <AccessibilityIcon />
+            <ContactMailOutlinedIcon />
             <a href="#contactme">CONTACT</a>
           </li>
         </ul>
