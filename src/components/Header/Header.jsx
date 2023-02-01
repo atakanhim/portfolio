@@ -1,14 +1,36 @@
 import React, { useState } from "react";
 import "./Header.scss";
-import AccessibilityIcon from "@mui/icons-material/Accessibility";
-
+import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
+import MenuOpenOutlinedIcon from "@mui/icons-material/MenuOpenOutlined";
 import Menu from "./HeaderComponent/Menu";
+
+import { styled, createTheme, ThemeProvider } from "@mui/material/styles";
+import { deepPurple } from "@mui/material/colors";
+
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
   const handleMenu = () => {
     console.log(showMenu);
     setShowMenu(!showMenu);
   };
+
+  const theme = createTheme({
+    transitions: {
+      duration: {
+        shortest: 150,
+        shorter: 200,
+        short: 250,
+        // most basic recommended timing
+        standard: 300,
+        // this is to be used in complex animations
+        complex: 1505,
+        // recommended when something is entering screen
+        enteringScreen: 225,
+        // recommended when something is leaving screen
+        leavingScreen: 195,
+      },
+    },
+  });
 
   return (
     <>
@@ -22,7 +44,33 @@ const Header = () => {
         </div>
 
         <div className="btn" onClick={() => handleMenu()}>
-          Menu{" "}
+          <ThemeProvider theme={theme}>
+            {showMenu ? (
+              <MenuOpenOutlinedIcon
+                sx={[
+                  {
+                    transition: (theme) =>
+                      theme.transitions.create("all", {
+                        duration: theme.transitions.duration.complex,
+                        ease: theme.transitions.easing.easeInOut,
+                      }),
+                  },
+                ]}
+              />
+            ) : (
+              <MenuOutlinedIcon
+                sx={[
+                  {
+                    transition: (theme) =>
+                      theme.transitions.create("all", {
+                        duration: theme.transitions.duration.complex,
+                        ease: theme.transitions.easing.easeInOut,
+                      }),
+                  },
+                ]}
+              />
+            )}
+          </ThemeProvider>
         </div>
       </div>
 
