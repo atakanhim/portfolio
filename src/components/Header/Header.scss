@@ -1,17 +1,20 @@
-.littleHeader{
-    display: none;
-
+.btn{
+    position: relative;
+   border: 1px solid var(--white);
+   padding: 10px 20px;
+  
 }
-.header{
+.menu{
+    background-color: var(--headerbackground);
+    position: fixed;
+    height: 100vh;
     padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 5px;
     align-items: center;
-
-
-
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.10);
+    transition: all ease-in-out 0.3s;
     ::after{
         content:' ';
         position: absolute;
@@ -25,67 +28,39 @@
         background-color: #2FBF71;
         z-index: -1;
     }
+    
 }
-.header_img{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 30px;
-    img{
-        display: flex;
-        width: 75px;
-        border: 5px solid #ffffff;
-        height: 75px;
-        border-radius: 50%;
-        margin-bottom: 20px;
-    }
-   
+.absolutemenu{
+    left: -600px;
+    top:0;
+    z-index: 1;
+}
+.littleHeader{
+    display: none;
 }
 
-.header_menu ul{
-    display: flex;
-    flex-direction: column;
-    font-size: x-small;
-    font-family: 'Times New Roman', Times, serif;
-    letter-spacing: 2px;
-    gap: 15px;
-    width: 220px;
-    color: var(--white);
-
-    li{
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        gap: 10px;
-        transition: all ease-in-out 0.3s;
-        padding: 10px 20px;
-        border-bottom: 1px solid var(--dark);
-    }
-   
-    li:hover{
-        color: #2FBF71;
-    }
-    li:last-child{
-        border-bottom: none;
-    }
+.absolutemenu.open{
+    left: 0;
 }
-
 @media screen and (max-width: 1200px) {
-    .header{
+    .menu{
         display: none;
+    }
+    .absolutemenu{
+        display: flex;
     }
     .littleHeader{
         display: flex;
         position: fixed;
         justify-content: space-between;
         align-items: center;
-        height: 60px;
+        height: 61px;
         width: 100%;
         padding: 20px;
         font-family: 'Times New Roman', Times, serif;
         letter-spacing: 2px;
         box-shadow: 0 2px 4px 0 rgba(0,0,0,0.10);
-        background-color: var(--headerbackground);
+        background-color: var(--mainbackground);
         color: var(--white);
 
         
