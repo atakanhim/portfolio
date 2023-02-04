@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { init } from "ityped";
 import Axios from "axios";
 import fileDownload from "js-file-download";
+
 import "./Home.scss";
 const Home = () => {
   const textRef = useRef();
@@ -14,21 +15,6 @@ const Home = () => {
       strings: ["Engineer", "Developer"],
     });
   }, []);
-
-  const downloadCv = (e) => {
-    e.preventDefault();
-    // get url from .env
-    console.log(process.env.REACT_APP_API);
-    try {
-      Axios.get(`${process.env.REACT_APP_API}/downloadCv`, {
-        responseType: "blob",
-      }).then((res) => {
-        fileDownload(res.data, "AtakanHim_CV.pdf");
-      });
-    } catch (err) {
-      console.log(err);
-    }
-  };
 
   return (
     <div className="homecontainer">
@@ -44,7 +30,9 @@ const Home = () => {
           I design and develop services for customers of all sizes, specializing
           in creating stylish, modern websites, web services and online stores.
         </p>
-        <button onClick={(e) => downloadCv(e)}>Download Cv</button>
+        <a href="CV-AtakanHim.pdf" download={"Cv.pdf"}>
+          Download Cv
+        </a>
       </div>
       <div className="homeright">
         <img

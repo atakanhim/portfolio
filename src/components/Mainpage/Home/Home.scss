@@ -16,7 +16,7 @@
         padding: 70px 10px;
       
         height: 70%;
-        button{
+        a{
             margin-top: 10px;
             background-color: var(--teal);
             color: var(--white);
@@ -36,11 +36,7 @@
                 color: var(--dark);
                 box-shadow:7px 7px 1px 0 var(--teal);
             }
-            // shadow
-            &:active{
-         
-            }
-
+          
 
         }
         h3{
