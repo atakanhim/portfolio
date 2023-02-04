@@ -11,7 +11,7 @@ const Menu = () => {
       <div className="header_img">
         {" "}
         <img
-          src="https://sergio-react.vercel.app/static/img/about-me.jpg"
+          src="https://avatarfiles.alphacoders.com/319/319262.jpg"
           alt="headerImg"
           width={90}
           height={90}

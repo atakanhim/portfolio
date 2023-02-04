@@ -48,8 +48,9 @@ const Home = () => {
       </div>
       <div className="homeright">
         <img
-          src="https://sergio-react.vercel.app/static/img/home-banner.png"
+          src="https://avatarfiles.alphacoders.com/319/319262.jpg"
           alt="home-banner"
+          style={{ borderRadius: "50%" }}
         />
       </div>
     </div>
