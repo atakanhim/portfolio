@@ -6,7 +6,6 @@ import "./Home.scss";
 const Home = () => {
   const textRef = useRef();
   useEffect(() => {
-    console.log(textRef.current);
     //const myElement = document.querySelector('#myElement')
     init(textRef.current, {
       showCursor: true,
@@ -19,13 +18,16 @@ const Home = () => {
   const downloadCv = (e) => {
     e.preventDefault();
     // get url from .env
-
-    Axios.get(process.env.PORTFOLIO, {
-      responseType: "blob",
-      method: "GET",
-    }).then((res) => {
-      fileDownload(res.data, "cv.pdf");
-    });
+    console.log(process.env.REACT_APP_API);
+    try {
+      Axios.get(`${process.env.REACT_APP_API}/downloadCv`, {
+        responseType: "blob",
+      }).then((res) => {
+        fileDownload(res.data, "AtakanHim_CV.pdf");
+      });
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (
