@@ -18,8 +18,9 @@ const Home = () => {
 
   const downloadCv = (e) => {
     e.preventDefault();
+    // get url from .env
 
-    Axios.get("https://server-atakanhm.onrender.com/downloadCv", {
+    Axios.get(process.env.PORTFOLIO, {
       responseType: "blob",
       method: "GET",
     }).then((res) => {
