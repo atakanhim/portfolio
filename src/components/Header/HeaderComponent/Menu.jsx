@@ -4,7 +4,14 @@ import PortraitOutlinedIcon from "@mui/icons-material/PortraitOutlined";
 import PersonPinOutlinedIcon from "@mui/icons-material/PersonPinOutlined";
 import ContactMailOutlinedIcon from "@mui/icons-material/ContactMailOutlined";
 import WorkspacesOutlinedIcon from "@mui/icons-material/WorkspacesOutlined";
+
+// social media
+import TwitterIcon from "@mui/icons-material/Twitter";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from "@mui/icons-material/GitHub";
+
 import "./Menu.scss";
+import { Link } from "react-router-dom";
 const Menu = () => {
   return (
     <>
@@ -21,33 +28,45 @@ const Menu = () => {
         <ul>
           <li>
             <HomeOutlinedIcon />
-            <a href="#home">HOME</a>
+            <Link to={"#home"}>HOME</Link>
           </li>
           <li>
             <PersonPinOutlinedIcon />
-            <a href="#aboutme">ABOUT ME</a>
+            <Link to={"#aboutme"}>ABOUT ME</Link>
           </li>
           <li>
             <WorkspacesOutlinedIcon />
-            <a href="#services">SERVICES</a>
+            <Link to={"#services"}>SERVICES</Link>
           </li>
           <li>
             <PortraitOutlinedIcon />
-            <a href="#portfolio">PORTFOLIO</a>
+            <Link to={"#portfolio"}>PORTFOLI</Link>
           </li>
           <li>
             <ContactMailOutlinedIcon />
-            <a href="#contactme">CONTACT</a>
+            <Link to={"#contact"}>CONTACT ME</Link>
           </li>
         </ul>
       </div>
       <div className="header_icons">
         <ul>
           <li>
-            <a href="#about">About</a>
+            <Link to={"https://twitter.com/kafaAtiyoAto"} target={"_blank"}>
+              <TwitterIcon fontSize="inherit" />
+            </Link>
           </li>
           <li>
-            <a href="#skills">Skills</a>
+            <Link
+              to={"https://www.linkedin.com/in/atakan-h-28262a189/"}
+              target={"_blank"}
+            >
+              <LinkedInIcon fontSize="inherit" />
+            </Link>
+          </li>
+          <li>
+            <Link to={"https://github.com/atakanhim"} target={"_blank"}>
+              <GitHubIcon fontSize="inherit" />
+            </Link>
           </li>
         </ul>
       </div>

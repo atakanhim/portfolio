@@ -1,4 +1,6 @@
-
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 :root{
     --blue: #007bff;
     --indigo: #6610f2;
@@ -7,7 +9,7 @@
     --red: #dc3545;
     --orange: #fd7e14;
     --yellow: #ffc107;
-    --green: #28a745;
+    --green: #2FBF71;
     --teal: #20c997;
     --cyan: #17a2b8;
     --white: #fff;
@@ -39,7 +41,5 @@ body {
   /* background-color: var(--mainbackground) */
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
 
