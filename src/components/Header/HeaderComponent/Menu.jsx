@@ -40,7 +40,7 @@ const Menu = () => {
           </li>
           <li>
             <PortraitOutlinedIcon />
-            <Link to={"#portfolio"}>PORTFOLI</Link>
+            <Link to={"#portfolio"}>PORTFOLIO</Link>
           </li>
           <li>
             <ContactMailOutlinedIcon />
