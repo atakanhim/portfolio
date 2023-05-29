@@ -30,7 +30,7 @@ const Home = () => {
           I design and develop services for customers of all sizes, specializing
           in creating stylish, modern websites, web services and online stores.
         </p>
-        <a href="CV-AtakanHim.pdf" download={"Cv.pdf"}>
+        <a href="CV-AtakanHim-EN.pdf" download={"AtakanHim-Cv.pdf"}>
           Download Cv
         </a>
       </div>
