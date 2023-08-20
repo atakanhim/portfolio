@@ -1,126 +1,115 @@
-.homecontainer{
+.homecontainer {
     display: flex;
+    justify-content: space-between;
     width: 100%;
     height: 100vh;
     flex-direction: row;
     align-items: center;
     border-bottom: 1px solid var(--gray);
-    border-radius: 3%;
+
     color: var(--white);
     padding: 50px;
-    .homeleft{
+    .homeleft {
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
         flex-direction: column;
         padding: 70px 10px;
-      
         height: 70%;
-        a{
+        a {
             margin-top: 10px;
             background-color: var(--teal);
             color: var(--white);
             padding: 10px 20px;
-            
             font-size: 1rem;
             font-weight: 600;
-            font-family: 'Poppins', sans-serif;
+            font-family: "Poppins", sans-serif;
             cursor: pointer;
             transition: all 0.3s ease-in-out;
-            // add shadow   
-            box-shadow:4px 4px 1px 0 var(--white);
+            // add shadow
+            box-shadow: 4px 4px 1px 0 var(--white);
 
-            &:hover{
-                transform: translate(-3px,-3px);
+            &:hover {
+                transform: translate(-3px, -3px);
                 background-color: var(--white);
                 color: var(--dark);
-                box-shadow:7px 7px 1px 0 var(--teal);
+                box-shadow: 7px 7px 1px 0 var(--teal);
             }
-          
-
         }
-        h3{
+        h3 {
             font-size: 1.5rem;
             font-weight: 400;
-            font-family: 'Poppins', sans-serif;
-           
+            font-family: "Poppins", sans-serif;
         }
-        h1{
+        h1 {
             font-size: 3rem;
             font-weight: 600;
-            font-family: 'Poppins', sans-serif;
-          
+            font-family: "Poppins", sans-serif;
         }
-        p{
+        p {
             width: 400px;
         }
     }
-    .homeright{
-       
-  
-       display: flex;
-       align-items: center;
-       justify-content: center;
+    .homeright {
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-        img{
-            width: 70%; 
+        img {
+            width: 70%;
             height: 70%;
         }
     }
 }
 
-@media screen and (max-width: 880px){
-    .homecontainer{
+@media screen and (max-width: 880px) {
+    .homecontainer {
         flex-direction: column;
         height: auto;
-        .homeleft{
-         padding-left: 80px;
-          width: 100%;
+        .homeleft {
+            padding-left: 80px;
+            width: 100%;
         }
-        .homeright{
-          width: 100%;
-          height: auto;
+        .homeright {
+            width: 100%;
+            height: auto;
         }
     }
 }
 @media screen and (max-width: 650px) {
-
-    .homecontainer{
-        
-        .homeleft{
-            padding-left:30px;
-            p{
+    .homecontainer {
+        .homeleft {
+            padding-left: 30px;
+            p {
                 width: 100%;
             }
         }
     }
 }
-@media  screen and (max-width: 500px) {
-        .homecontainer{
-            height: 100vh;
-       .homeleft{
-                width: 100%;
-                padding: 50px 10px;
-                h1{
-                    font-size: 2rem;
-                }
-                h3{
-                    font-size: 1rem;
-                }
-                p{
-                    margin-top: 15px;
-                    width: 100%;
-                }
-              
+@media screen and (max-width: 500px) {
+    .homecontainer {
+        height: 100vh;
+        .homeleft {
+            width: 100%;
+            padding: 50px 10px;
+            h1 {
+                font-size: 2rem;
             }
-            .homeright{
+            h3 {
+                font-size: 1rem;
+            }
+            p {
+                margin-top: 15px;
+                width: 100%;
+            }
+        }
+        .homeright {
+            width: 100%;
+            height: 100%;
+            img {
                 width: 100%;
                 height: 100%;
-                img{
-                    width: 100%;
-                    height: 100%;
-                }
             }
-           
         }
+    }
 }

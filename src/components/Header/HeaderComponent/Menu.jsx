@@ -1,9 +1,10 @@
 import React from "react";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
-import PortraitOutlinedIcon from "@mui/icons-material/PortraitOutlined";
 import PersonPinOutlinedIcon from "@mui/icons-material/PersonPinOutlined";
-import ContactMailOutlinedIcon from "@mui/icons-material/ContactMailOutlined";
-import WorkspacesOutlinedIcon from "@mui/icons-material/WorkspacesOutlined";
+
+// import PortraitOutlinedIcon from "@mui/icons-material/PortraitOutlined";
+// import ContactMailOutlinedIcon from "@mui/icons-material/ContactMailOutlined";
+// import WorkspacesOutlinedIcon from "@mui/icons-material/WorkspacesOutlined";
 
 // social media
 import TwitterIcon from "@mui/icons-material/Twitter";
@@ -13,6 +14,14 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import "./Menu.scss";
 import { Link } from "react-router-dom";
 const Menu = () => {
+  const handleMenuClick = (e, target) => {
+    e.preventDefault();
+    const element = document.getElementById(target);
+    element.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+  };
   return (
     <>
       <div className="header_img">
@@ -28,23 +37,11 @@ const Menu = () => {
         <ul>
           <li>
             <HomeOutlinedIcon />
-            <Link to={"#home"}>HOME</Link>
+            <a href={"#home"} onClick={(e) => handleMenuClick(e, 'home')}>HOME</a>
           </li>
           <li>
             <PersonPinOutlinedIcon />
-            <Link to={"#aboutme"}>ABOUT ME</Link>
-          </li>
-          <li>
-            <WorkspacesOutlinedIcon />
-            <Link to={"#services"}>SERVICES</Link>
-          </li>
-          <li>
-            <PortraitOutlinedIcon />
-            <Link to={"#portfolio"}>PORTFOLIO</Link>
-          </li>
-          <li>
-            <ContactMailOutlinedIcon />
-            <Link to={"#contact"}>CONTACT ME</Link>
+            <a href={"#myprojects"} onClick={(e) => handleMenuClick(e, 'myprojects')}>My Projects</a>
           </li>
         </ul>
       </div>

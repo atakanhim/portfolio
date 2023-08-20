@@ -1,9 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { init } from "ityped";
-import Axios from "axios";
-import fileDownload from "js-file-download";
-
 import "./Home.scss";
+
 const Home = () => {
   const textRef = useRef();
   useEffect(() => {

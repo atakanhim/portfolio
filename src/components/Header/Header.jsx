@@ -4,8 +4,8 @@ import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import MenuOpenOutlinedIcon from "@mui/icons-material/MenuOpenOutlined";
 import Menu from "./HeaderComponent/Menu";
 
-import { styled, createTheme, ThemeProvider } from "@mui/material/styles";
-import { deepPurple } from "@mui/material/colors";
+import {  createTheme, ThemeProvider } from "@mui/material/styles";
+
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);

@@ -1,10 +1,17 @@
 import React from "react";
 import Home from "./Home/Home";
 import "./Mainpage.scss";
+import MyProjects from "./Aboutme/MyProjects";
 const Mainpage = () => {
   return (
     <div className="mainpage">
-      <Home />
+      <section id="home" >
+        <Home />
+      </section>
+      <section id="myprojects" >
+        <MyProjects />
+      </section>
+
     </div>
   );
 };
